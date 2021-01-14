@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import {Col, Container, Row} from "react-bootstrap";
 
 function NoPageFound() {
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col-md-12">
+        <Container>
+            <Row>
+                <Col>
                     <div className="error-template">
                         <h1>Oops!</h1>
                         <h2>404 Not Found</h2>
@@ -17,9 +18,9 @@ function NoPageFound() {
                             </Link>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                </Col>
+            </Row>
+        </Container>
     );
 }
 

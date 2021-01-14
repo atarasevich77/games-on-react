@@ -1,8 +1,10 @@
+import {Container} from "react-bootstrap";
+
 function Snake() {
     return (
-        <div>
+        <Container>
             Snake page
-        </div>
+        </Container>
     );
 }
 
