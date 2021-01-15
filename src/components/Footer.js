@@ -11,8 +11,9 @@ function Footer() {
         <footer>
             <Row className="fixed-bottom">
                 <Col className="text-center">
-                    <a style={styleLink} target="blank" href="https://github.com/kano-kenji/games-on-react">© Alexander
-                        Tarasevich</a>
+                    <a style={styleLink} target="blank" href="https://github.com/kano-kenji/games-on-react">
+                        &copy; Alexander Tarasevich
+                    </a>
                 </Col>
             </Row>
         </footer>
