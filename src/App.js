@@ -9,12 +9,12 @@ function App() {
     return (
         <Router>
             <Header />
-            <Footer />
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route path="/snake" component={Snake}/>
                 <Route component={NoPageFound}/>
             </Switch>
+            <Footer />
         </Router>
     );
 }
