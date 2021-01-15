@@ -1,14 +1,18 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 import {Col, Container, Row} from "react-bootstrap";
 
 function Footer() {
+    const styleLink= {
+        color: 'inherit',
+        textDecoration: 'inherit'
+    };
+
     return (
         <footer>
             <Row className="fixed-bottom">
                 <Container>
                     <Col className="text-center">
-                        <Link to="https://github.com/kano-kenji/games-on-react">© Alexander Tarasevich</Link>
+                        <a style={styleLink} target="blank" href="https://github.com/kano-kenji/games-on-react">© Alexander Tarasevich</a>
                     </Col>
                 </Container>
             </Row>
