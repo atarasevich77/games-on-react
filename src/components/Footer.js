@@ -1,8 +1,8 @@
 import React from 'react';
-import {Col, Container, Row} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 
 function Footer() {
-    const styleLink= {
+    const styleLink = {
         color: 'inherit',
         textDecoration: 'inherit'
     };
@@ -10,11 +10,10 @@ function Footer() {
     return (
         <footer>
             <Row className="fixed-bottom">
-                <Container>
-                    <Col className="text-center">
-                        <a style={styleLink} target="blank" href="https://github.com/kano-kenji/games-on-react">© Alexander Tarasevich</a>
-                    </Col>
-                </Container>
+                <Col className="text-center">
+                    <a style={styleLink} target="blank" href="https://github.com/kano-kenji/games-on-react">© Alexander
+                        Tarasevich</a>
+                </Col>
             </Row>
         </footer>
     );
