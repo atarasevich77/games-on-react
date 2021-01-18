@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Home from "./components/Home";
-import Snake from "./components/Snake";
-import NoPageFound from "./components/NoPageFound";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Home from "./components/pages/Home";
+import Snake from "./components/pages/Snake";
+import NoPageFound from "./components/pages/NoPageFound";
+import Header from "./components/pages/Header";
+import Footer from "./components/pages/Footer";
 
 function App() {
     return (
