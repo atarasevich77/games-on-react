@@ -15,7 +15,7 @@ function App(props) {
     return (
         <Router>
             <Header />
-            <Row className="row justify-content-sm-end">
+            <Row className="row justify-content-sm-end mr-2">
                 Server status: &nbsp; <span style={serverStatus}>{props.severConnect ? 'Ok' : 'Down'}</span>
             </Row>
             <Switch>
