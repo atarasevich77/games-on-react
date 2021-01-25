@@ -1,6 +1,6 @@
 import { Row } from "react-bootstrap";
 
-function SnakeGame() {
+function SnakeGame(props) {
 
     return (
         <Row>

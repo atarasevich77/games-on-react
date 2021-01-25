@@ -1,3 +1,4 @@
+import * as actions from '../redux/actions';
 
 const initUsers = {
     users: [],
@@ -7,7 +8,18 @@ const initUsers = {
 
 const users = (state = initUsers, action) => {
     switch (action.type) {
-        //TODO add actions
+        case actions.GET_USERS:
+            return {
+                ...state,
+                users: action.payload,
+                severConnect: true
+            };
+        case actions.GET_FAILURE:
+            return {
+                ...state,
+                severConnect: false,
+                errors: action.payload
+            };
         default:
             return state;
     }
