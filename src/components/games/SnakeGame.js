@@ -1,31 +1,44 @@
 import {connect} from "react-redux";
-import {Button, Row} from "react-bootstrap";
+import {Button, FormControl, InputGroup, Row} from "react-bootstrap";
 import {useState} from "react";
 
-function SnakeGame(props) {
-    const initialRows = [];
-    const [rows, setRows] = useState('');
-    const initializeRows = (e) => {
+function SnakeGame() {
+    const [board, setBoard] = useState([]);
+    const [boardSize, setBoardSize] = useState(null);
+
+    const onCreateBoard = (e) => {
         e.preventDefault();
-        for (let i = 0; i < rows; i++) {
-            initialRows.push([]);
-            for (let j = 0; j < rows; j++) {
-                initialRows[i].push("blank");
+        if(!isNaN(+boardSize) && boardSize !== null){
+            for (let row = 0; row < boardSize; row++) {
+                const cols = [];
+                for (let col = 0; col < boardSize; col ++) {
+                    cols.push({ row, col });
+                }
+                setBoard([...board, cols]);
             }
         }
-        console.log(initialRows);
-        setRows('');
+        setBoardSize(null);
     }
-
 
     return (
         <>
             <Row className="row justify-content-sm-center">
-                <input type="text" onChange={(e) => setRows(e.target.value)}></input>
-                <Button variant="dark" onClick={initializeRows}>Create</Button>
+                <InputGroup className="mb-2 w-25">
+                    <FormControl type="number"
+                                 value={boardSize?? ''}
+                                 onChange={e => setBoardSize(e.target.value)}
+                                 placeholder="Input the Board Size"/>
+                    <InputGroup.Append>
+                        <Button variant="dark" onClick={onCreateBoard}>Button</Button>
+                    </InputGroup.Append>
+                </InputGroup>
             </Row>
             <Row>
+                {
+                    board.map(row => {
 
+                    })
+                }
             </Row>
         </>
     );
