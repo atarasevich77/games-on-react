@@ -19,10 +19,15 @@ function SnakeGame(props) {
 
 
     return (
-        <Row className="row justify-content-sm-center">
-            <input type="text" onChange={(e) => setRows(e.target.value)}></input>
-            <Button variant="dark" onClick={initializeRows}>Create</Button>
-        </Row>
+        <>
+            <Row className="row justify-content-sm-center">
+                <input type="text" onChange={(e) => setRows(e.target.value)}></input>
+                <Button variant="dark" onClick={initializeRows}>Create</Button>
+            </Row>
+            <Row>
+
+            </Row>
+        </>
     );
 }
 
