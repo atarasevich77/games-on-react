@@ -14,7 +14,7 @@ function SnakeGame() {
                 for (let col = 0; col < boardSize; col ++) {
                     cols.push({ row, col });
                 }
-                setBoard([...board, cols]);
+                setBoard(cols);
             }
         }
         setBoardSize(null);
