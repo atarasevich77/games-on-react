@@ -20,6 +20,16 @@ function SnakeGame() {
         setBoardSize(null);
     }
 
+    const drawGrid = () => {
+        return (
+            board.map((row, i) => {
+                return row.map(cell => {
+                    return <Row key={cell.row + cell.col} className="cell cell-border"/>
+                });
+            })
+        );
+    }
+
     return (
         <>
             <Row className="row justify-content-sm-center">
@@ -33,12 +43,8 @@ function SnakeGame() {
                     </InputGroup.Append>
                 </InputGroup>
             </Row>
-            <Row>
-                {
-                    board.map(row => {
-
-                    })
-                }
+            <Row className="grid">
+                { drawGrid() }
             </Row>
         </>
     );
