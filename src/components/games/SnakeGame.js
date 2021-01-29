@@ -1,13 +1,27 @@
 import {connect} from "react-redux";
-import { Row } from "react-bootstrap";
+import {Button, Row} from "react-bootstrap";
+import {useState} from "react";
 
 function SnakeGame(props) {
+    const initialRows = [];
+    const [rows, setRows] = useState('');
+    const initializeRows = (e) => {
+        e.preventDefault();
+        for (let i = 0; i < rows; i++) {
+            initialRows.push([]);
+            for (let j = 0; j < rows; j++) {
+                initialRows[i].push("blank");
+            }
+        }
+        console.log(initialRows);
+        setRows('');
+    }
 
-    console.log(props.users)
 
     return (
-        <Row>
-
+        <Row className="row justify-content-sm-center">
+            <input type="text" onChange={(e) => setRows(e.target.value)}></input>
+            <Button variant="dark" onClick={initializeRows}>Create</Button>
         </Row>
     );
 }
