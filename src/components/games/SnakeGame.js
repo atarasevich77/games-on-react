@@ -7,7 +7,6 @@ function SnakeGame() {
     const [boardSize, setBoardSize] = useState(null);
 
     const onCreateBoard = (e) => {
-        e.preventDefault();
         if(!isNaN(+boardSize) && boardSize !== null){
             for (let row = 0; row < boardSize; row++) {
                 const cols = [];
@@ -18,6 +17,7 @@ function SnakeGame() {
             }
         }
         setBoardSize(null);
+        e.preventDefault();
     }
 
     const drawGrid = () => {
